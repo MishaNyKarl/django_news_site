@@ -1,0 +1,14 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}{{ article.title }}{% endblock %}
+
+{% block content%}
+    <a href="{% url 'home' %}" class="btn btn-secondary btn-lg" disabled>Назад</a>
+    <div class="features">
+        <h2>{{ article.title }}</h2>
+        <p>{{ article.date }}</p>
+        <p>{{ article.full_text }}</p>
+        <a href="{% url 'news-update' article.id %}" class="btn btn-warning">Редактировать</a>
+        <a href="{% url 'news-delete' article.id %}" class="btn btn-danger">Удалить</a>
+    </div>
+{% endblock %}
