@@ -14,3 +14,7 @@ def about(request):
 
 def contacts(request):
     return render(request, 'main/contacts.html')
+
+
+def sign_up(request):
+    return render(request, 'main/sign_up.html')
